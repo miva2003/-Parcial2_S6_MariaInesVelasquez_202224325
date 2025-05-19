@@ -1,3 +1,27 @@
-<p>
-  aerolinea-list works!
-</p>
+<div class="container-fluid">
+  <div>
+    <br />
+
+    <div class="selected-book rounded" *ngIf="selected">
+      <app-aerolinea-detail></app-aerolinea-detail>
+    </div>
+    <br />
+    <div>
+      <div class="row"  style="display: flex; justify-content: center; align-items: center;">
+        <div *ngFor="let aero of aerolineas" style="display: flex; justify-content: center; align-items: center; max-width: 15rem;">
+          <div class="aero-card card {{aero.identityColor}} p-2 mb-2" style="width: 15rem; height: 33rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ aero.airlineName }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+  </div>
+</div>
