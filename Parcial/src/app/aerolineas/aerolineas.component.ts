@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Aerolinea } from './aerolinea';
 
 @Component({
   standalone: false,
@@ -9,15 +8,13 @@ import { Aerolinea } from './aerolinea';
 })
 export class AerolineasComponent implements OnInit {
 
-  aerolineas: Aerolinea[];
+
 
   constructor() { }
 
-  getAerolineas(): Aerolinea[] {
-    return dataAerolineas;
-  }
+ 
   ngOnInit() {
-    this.aerolineas = this.getAerolineas();
+    
   }
 
 }

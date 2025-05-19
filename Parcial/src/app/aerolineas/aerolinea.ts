@@ -1,3 +1,5 @@
+import { Vuelo } from "../vuelos/vuelo";
+
 export class Aerolinea {
     id: String;
     airlineName: String;
@@ -6,6 +8,7 @@ export class Aerolinea {
     address: String;
     identityColor:String;
     slogan: String;
+    flights: Vuelo[]
     
     constructor( id: String,
     airlineName: String,
@@ -13,7 +16,7 @@ export class Aerolinea {
     city: String,
     address: String,
     identityColor:String,
-    slogan: String ){
+    slogan: String, flights: Array<Vuelo>) {
         this.id = id;
         this.airlineName = airlineName;
         this.country = country;
@@ -21,5 +24,6 @@ export class Aerolinea {
         this.address = address;
         this.identityColor=identityColor;
         this.slogan=slogan;
+        this.flights = flights;
     }
 }
